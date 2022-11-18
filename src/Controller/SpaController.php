@@ -27,6 +27,12 @@ class SpaController extends AbstractController
         return $this->render('spa/team.html.twig');
     }
 
+    #[Route('/services', name:'app_service')]
+    public function service()
+    {
+        return $this->render('spa/service.html.twig');
+    }
+
     #[Route('/contact', name:'app_contact')]
     public function contact(Request $request, EntityManagerInterface $manager): Response
     {
